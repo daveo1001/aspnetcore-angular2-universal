@@ -26,6 +26,10 @@ import { LinkService } from './shared/link.service';
 import { UserService } from './shared/user.service';
 import { ORIGIN_URL } from '@nguniversal/aspnetcore-engine';
 
+//Staticat Services
+import { SettingsService } from './services/settings.service';
+import { AuthService } from './services/auth.service';
+
 export function createTranslateLoader(http: HttpClient, baseHref) {
     // Temporary Azure hack
     if (baseHref === null && typeof window !== 'undefined') {
@@ -149,6 +153,8 @@ export function createTranslateLoader(http: HttpClient, baseHref) {
     providers: [
         LinkService,
         UserService,
+        SettingsService,
+        //AuthService, //Gets unhappy being prerendered
         TranslateModule
     ],
     bootstrap: [AppComponent]
