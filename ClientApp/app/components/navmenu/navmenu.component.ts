@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { AuthService } from '../../services/auth.service';
+
 @Component({
     selector: 'app-nav-menu',
     templateUrl: './navmenu.component.html',
@@ -8,6 +10,8 @@ import { Component } from '@angular/core';
 
 export class NavMenuComponent {
     collapse: string = 'collapse';
+
+    // constructor(private authService: AuthService) {}
 
     collapseNavbar(): void {
         if (this.collapse.length > 1) {
@@ -19,5 +23,9 @@ export class NavMenuComponent {
 
     collapseMenu() {
         this.collapse = 'collapse';
+    }
+
+    login() {
+        // this.authService.login();
     }
 }

@@ -1,8 +1,9 @@
 ﻿<h1>{{ title }}</h1>
 
 <blockquote>
-  <strong>Enjoy the latest features from .NET Core & Angular 5.0!</strong>
+  <strong>Enjoy the latest features from .NET Core &amp; Angular 5.0!</strong>
   <br> For more info check the repo here: <a href="https://github.com/MarkPieszak/aspnetcore-angular2-universal">AspNetCore-Angular2-Universal repo</a>
+  <p *ngIf="userId">User Id: {{ userId }}</p>
   <br><br>
 </blockquote>
 
@@ -32,7 +33,7 @@
       </li>
 
       <li>Bootstrap (ngx-bootstrap) : Bootstrap capable of being rendered even on the server.</li>
-      <li>Unit testing via karma & jasmine.</li>
+      <li>Unit testing via karma &amp; jasmine.</li>
     </ul>
 
   </div>
